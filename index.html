@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Fajar Digital</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #00c6ff, #0072ff, #9b00ff);
+      background-size: 400% 400%;
+      animation: gradientMove 8s ease infinite;
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .card {
+      background: #ffffff;
+      padding: 25px;
+      width: 100%;
+      max-width: 380px;
+      border-radius: 18px;
+      text-align: center;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+    }
+
+    h1 {
+      margin-top: 0;
+      color: #333;
+    }
+
+    button {
+      width: 100%;
+      padding: 14px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 12px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    button:active {
+      transform: scale(0.96);
+    }
+
+    .btn-lynk {
+      background: linear-gradient(135deg, #00ffcc, #00c9ff);
+      color: #000;
+    }
+
+    .btn-wa {
+      background: linear-gradient(135deg, #25D366, #1ebe5d);
+      color: #fff;
+    }
+
+    .btn-donasi {
+      background: linear-gradient(135deg, #ffb347, #ffcc33);
+      color: #000;
+    }
+
+    .btn-dana {
+      background: linear-gradient(135deg, #108ee9, #00c6ff);
+      color: #fff;
+    }
+
+    .box {
+      background: #f4f6f8;
+      padding: 15px;
+      border-radius: 12px;
+      margin-top: 15px;
+      display: none;
+      color: #333;
+    }
+
+    .highlight {
+      font-size: 20px;
+      font-weight: bold;
+      color: #0072ff;
+      margin: 10px 0;
+    }
+
+    .text-small {
+      font-size: 14px;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="card">
+    <h1>Fajar Digital</h1>
+
+    <button class="btn-lynk" onclick="openLynk()">
+      lynk.id fajar digital
+    </button>
+
+    <button class="btn-wa" onclick="openWA()">
+      💬 Chat WhatsApp
+    </button>
+
+    <button class="btn-donasi" onclick="toggleDonasi()">
+      Donasi
+    </button>
+
+    <div class="box" id="donasiBox">
+      <button class="btn-dana" onclick="showDana()">
+        Bayar via DANA
+      </button>
+
+      <div class="box" id="danaBox">
+        <p>Nomor DANA:</p>
+        <div class="highlight">0858 1743 4705</div>
+
+        <p class="text-small">
+          Setelah transfer, kirimkan <b>bukti pembayaran</b> via DM:
+        </p>
+
+        <p class="text-small">
+          📩 WhatsApp / TikTok<br>
+          🔗 Link di bio:<br>
+          <b>lynk.id/ardinurf13</b>
+        </p>
+
+        <p class="text-small">
+          🙏 Terima kasih atas dukungannya
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function openLynk() {
+      window.open("https://lynk.id/ardinurf13", "_blank");
+    }
+
+    function openWA() {
+      window.open("https://wa.me/62881026596259", "_blank");
+    }
+
+    function toggleDonasi() {
+      const box = document.getElementById("donasiBox");
+      box.style.display = box.style.display === "block" ? "none" : "block";
+    }
+
+    function showDana() {
+      document.getElementById("danaBox").style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
